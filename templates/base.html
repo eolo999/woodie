@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
+        <title>{% block title %}{% endblock %} - Woodie</title>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="bodywrapper">
+            <div id="document">
+                {% block content %}{% endblock %}
+            </div>
+            <div id="footer">
+                {% block footer %}
+                <a href="http://github.com/eolo999/woodie">woodie is on github</a>.
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
