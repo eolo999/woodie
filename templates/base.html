@@ -4,16 +4,34 @@
         {% block head %}
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
         <title>{% block title %}{% endblock %} - Woodie</title>
+				<link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
+				<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold' rel='stylesheet' type='text/css'>
+				<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+				<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+				<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
         {% endblock %}
     </head>
     <body>
         <div id="bodywrapper">
             <div id="document">
-                {% block content %}{% endblock %}
-            </div>
+							<div id='header'>
+              	<h1>
+									<img src="http://mirrors.creativecommons.org/presskit/icons/nc.large.png" width="44" height="44" alt="Logo"> 
+										W<span class="violet">oo</span>die
+								</h1>
+						  	<h2>Perchè non ci sono soltanto i soldi</h2>  
+              	<div class="navService">
+									<a href="mailto:eodbat@gmail.com" class="button">Contact Woodie »</a> 
+									<a href="http://github.com/eolo999/woodie" class="">Woodie is on Github »</a></div>
+								</div>	
+							<div id="content">
+								{% block content %}{% endblock %}
+            	</div>
+						</div>
             <div id="footer">
                 {% block footer %}
-                <a href="http://github.com/eolo999/woodie">woodie is on github</a>.
+                <a href="mailto:eodbat@gmail.com">contact woodie</a> |
+ 								<a href="http://github.com/eolo999/woodie">woodie is on github</a>
                 {% endblock %}
             </div>
         </div>
